@@ -22,7 +22,7 @@ public class BoardNativeRepository {
     }
 
     public List<Board> findAll() {
-        Query query = em.createNativeQuery("select * from board_tb order by id desc", Board.class);
+        Query query = em.createNativeQuery("select * from board_tb", Board.class);
         List<Board> list = query.getResultList();
         return list;
     }
